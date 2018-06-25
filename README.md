@@ -11,4 +11,5 @@
 ## TIL(Today I Learned)
     - GH에서 학습한 내용들과 관련된 코드들입니다.
     - Includes Hard-codes of Each Machine Learning Algorithm
-    - 내용: Decision Tree (including Random Forest), Clustering(K-Means, Hierarchical), Neural Network, Word Cloud, NLP(N-gram, LDA)
+    - 내용: Decision Tree (including Random Forest), Clustering(K-Means, Hierarchical), Neural Network, Word Cloud,
+            NLP(N-gram, LDA)
