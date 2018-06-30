@@ -21,3 +21,18 @@ new_img = [recolor(row) for row in img]
 plt.imshow(new_img)
 plt.axis('off')
 plt.show()
+
+## return predicted pic of simillar colors
+
+import numpy as np
+
+def replace_pred(model, pixels):
+    pred = model.predict(pixels)
+    di=dict(zip(range(pred.max()+1), model.cluster_centers_))
+    for i in range(0,pred.max()+1):
+        di[i]=list(map(int,(di[i])))
+    rows, cols, channels = img.shape
+    pred=pred.reshape(rows, cols).tolist()
+    return np.array([[di[pixel] for pixel in row] for row in pred], dtype='uint8')
+
+plt.imshow(replace_pred(model, pixels))
